@@ -42,7 +42,7 @@ Log.Logger = new LoggerConfiguration()
          builder.Services.AddSingleton<IVersionService, VersionService>();
 
          builder.Configuration.AddAzureKeyVault(
-             new Uri($"https://kv-{YOURNAMEHERE}-{builder.Environment.EnvironmentName}.vault.azure.net/"),
+             new Uri($"https://kv-briandesarmo-{builder.Environment.EnvironmentName}.vault.azure.net/"),
              new ChainedTokenCredential(new AzureCliCredential(), new ManagedIdentityCredential()));
 
          builder.Services.AddApplicationInsightsTelemetry(options =>

@@ -69,4 +69,9 @@ resource appServiceSlotSetting 'Microsoft.Web/sites/slots/config@2022-09-01' = {
   }
 }
 
+output appServiceInfo object = {
+  appId: appService.identity.principalId
+  slotId: appServiceSlot.identity.principalId
+}
+
 
